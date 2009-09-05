@@ -17,7 +17,7 @@ class LinkedListTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(true, $this->linked_list->isEmpty());
     }
 
-    public function testpush()
+    public function testPush()
     {
         $nodes = array(new Node(1), new Node(2));
 
@@ -111,7 +111,7 @@ class LinkedListTest extends PHPUnit_Framework_TestCase
         $this->linked_list->clear();
     }
 
-    public function testpop()
+    public function testPop()
     {
         $this->linked_list->pop();
         $this->assertEquals('', (string) $this->linked_list);
