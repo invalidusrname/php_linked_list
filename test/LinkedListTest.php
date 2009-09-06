@@ -62,7 +62,8 @@ class LinkedListTest extends PHPUnit_Framework_TestCase
         $another_node = new Node(2);
 
         $this->linked_list->push($another_node);
-        $this->assertEquals($another_node->value(), $this->linked_list->getLast()->value());
+        $last = $this->linked_list->getLast();
+        $this->assertEquals($another_node->value(), $last->value());
     }
 
     public function testInsertAtBeginning()
@@ -178,8 +179,6 @@ class LinkedListTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('', $this->linked_list->printReverse());
     }
-
-
 }
 
 ?>
