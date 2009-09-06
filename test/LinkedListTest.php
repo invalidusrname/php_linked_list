@@ -83,59 +83,57 @@ class LinkedListTest extends PHPUnit_Framework_TestCase
     {
         $this->linked_list->removeBeginning();
         $this->assertEquals('', (string) $this->linked_list);
-        $this->linked_list->clear();
 
+        $this->linked_list->clear();
         $this->linked_list->push(new Node(1));
         $this->linked_list->removeBeginning();
         $this->assertEquals('', (string) $this->linked_list);
-        $this->linked_list->clear();
 
+        $this->linked_list->clear();
         $this->linked_list->push(new Node(1));
         $this->linked_list->push(new Node(2));
         $this->linked_list->removeBeginning();
         $this->assertEquals('2', (string) $this->linked_list);
-        $this->linked_list->clear();
 
+        $this->linked_list->clear();
         $this->linked_list->push(new Node(1));
         $this->linked_list->push(new Node(2));
         $this->linked_list->push(new Node(3));
         $this->linked_list->removeBeginning();
         $this->assertEquals('2-3', (string) $this->linked_list);
-        $this->linked_list->clear();
 
+        $this->linked_list->clear();
         $this->linked_list->push(new Node(1));
         $this->linked_list->removeBeginning();
         $this->linked_list->push(new Node(2));
         $this->linked_list->removeBeginning();
         $this->assertEquals('', (string) $this->linked_list);
-        $this->linked_list->clear();
     }
 
     public function testPop()
     {
         $this->linked_list->pop();
         $this->assertEquals('', (string) $this->linked_list);
-        $this->linked_list->clear();
 
+        $this->linked_list->clear();
         $this->linked_list->push(new Node(1));
         $this->linked_list->pop();
         $this->assertEquals('', (string) $this->linked_list);
+
         $this->linked_list->clear();
-
-
         $this->linked_list->push(new Node(1));
         $this->linked_list->push(new Node(2));
         $this->linked_list->pop();
         $this->assertEquals('1', (string) $this->linked_list);
-        $this->linked_list->clear();
 
+        $this->linked_list->clear();
         $this->linked_list->push(new Node(1));
         $this->linked_list->push(new Node(2));
         $this->linked_list->push(new Node(3));
         $this->linked_list->pop();
         $this->assertEquals('1-2', (string) $this->linked_list);
-        $this->linked_list->clear();
 
+        $this->linked_list->clear();
         $this->linked_list->push(new Node(1));
         $this->linked_list->pop();
         $this->linked_list->push(new Node(1));
@@ -163,7 +161,6 @@ class LinkedListTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('', $this->linked_list->printReverse());
 
         $this->linked_list->clear();
-
 
         $this->linked_list->push(new Node(1));
         $this->linked_list->push(new Node(2));
