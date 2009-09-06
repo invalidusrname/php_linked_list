@@ -28,21 +28,21 @@ require_once dirname(__FILE__) . "/Node.php";
 class LinkedList
 {
     /**
-     * first node in the LinkedList
+     * first node
      *
      * @var Node
      */
     private $_first;
 
     /**
-     * last node in the LinkedList
+     * last node
      *
      * @var Node
      */
     private $_last;
 
     /**
-     * number of nodes in list
+     * number of nodes
      *
      * @var integer
      */
@@ -60,7 +60,7 @@ class LinkedList
     }
 
     /**
-     * adds a node to the end of the linked list and increases the count
+     * adds a Node to the end and increases the count
      *
      * @param Node $new_node node to add
      *
@@ -110,7 +110,7 @@ class LinkedList
     }
 
     /**
-     * adds a node to the beginning
+     * adds a Node to the beginning
      *
      * @param Node $node node to add
      *
@@ -131,7 +131,7 @@ class LinkedList
     }
 
     /**
-     * undocumented function
+     * removes the first Node
      *
      * @return mixed the node removed
      **/
@@ -159,7 +159,7 @@ class LinkedList
     }
 
     /**
-     * removes the last item in the list
+     * removes the last Node
      *
      * @return void
      **/
@@ -185,7 +185,7 @@ class LinkedList
     }
 
     /**
-     * gets the first item in the LinkedList
+     * gets the first Node
      *
      * @return mixed
      */
@@ -195,7 +195,7 @@ class LinkedList
     }
 
     /**
-     * gets the last item in the LinkedList
+     * gets the last Node
      *
      * @return mixed
      */
@@ -205,7 +205,7 @@ class LinkedList
     }
 
     /**
-     * checks if the LinkedList is empty
+     * checks if we have nodes
      *
      * @return boolean
      */
@@ -215,7 +215,7 @@ class LinkedList
     }
 
     /**
-     * clears everything out
+     * clears out all nodes
      *
      * @return void
      */
@@ -227,7 +227,7 @@ class LinkedList
     }
 
     /**
-     * size of the LinkedList
+     * number of nodes
      *
      * @return integer
      */
@@ -239,7 +239,7 @@ class LinkedList
     /**
      * toString
      *
-     * @return string a string representation of the list
+     * @return string a string representation of the nodes
      */
     public function __toString()
     {
@@ -258,7 +258,7 @@ class LinkedList
     /**
      * like __toString, but reversed
      *
-     * @return string a reversed string representation of the list
+     * @return string a reversed string representation of the nodes
      */
     public function printReverse()
     {
