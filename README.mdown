@@ -6,8 +6,12 @@ A Linked List done in PHP
 
 To run, you need to have [phpunit](http://www.phpunit.de) installed to run the tests.
 
-To run all tests: `phpunit test/*`
+To run all tests: 
+
+`phpunit test/*`
 
 There's also a [watchr](http://github.com/mynyml/watchr) spec file, should you choose expand this tiny library while doing TDD.
 
-To start up watcher monitoring: `watchr specs.watchr`
+To start up watcher monitoring: 
+
+`watchr specs.watchr`
