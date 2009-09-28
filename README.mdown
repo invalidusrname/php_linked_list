@@ -1,0 +1,9 @@
+# A Linked List.
+
+Happened on a lazy Saturday. For real.
+
+## Running tests
+
+To run, you need to have [phpunit](http://www.phpunit.de) installed to run the tests.
+
+There's also a [watchr](http://github.com/mynyml/watchr) spec file, should you choose expand this tiny library while doing TDD.
