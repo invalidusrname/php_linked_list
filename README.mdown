@@ -1,6 +1,6 @@
-# A Linked List.
+# A Linked List
 
-Happened on a lazy Saturday. For real.
+A Linked List done in PHP
 
 ## Running tests
 
