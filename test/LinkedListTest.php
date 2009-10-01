@@ -14,7 +14,7 @@ class LinkedListTest extends PHPUnit_Framework_TestCase
 
     public function testEmptyLinkedListIsEmpty()
     {
-        $this->assertEquals(true, $this->linked_list->isEmpty());
+        $this->assertTrue($this->linked_list->isEmpty());
     }
 
     public function testPush()
@@ -23,11 +23,11 @@ class LinkedListTest extends PHPUnit_Framework_TestCase
 
         $this->linked_list->push($nodes[0]);
 
-        $this->assertEquals(false, $this->linked_list->isEmpty());
+        $this->assertFalse($this->linked_list->isEmpty());
 
         $this->linked_list->push($nodes[1]);
 
-        $this->assertEquals(false, $this->linked_list->isEmpty());
+        $this->assertFalse($this->linked_list->isEmpty());
         $this->assertEquals(2, $this->linked_list->size());
 
         $node = $this->linked_list->getIndex(0);
@@ -71,7 +71,7 @@ class LinkedListTest extends PHPUnit_Framework_TestCase
         $node = new Node(1);
         $this->linked_list->insertAtBeginning($node);
         $this->assertEquals($node, $this->linked_list->getFirst());
-        $this->assertEquals(false, $this->linked_list->isEmpty());
+        $this->assertFalse($this->linked_list->isEmpty());
 
         $another_node = new Node(1);
         $this->linked_list->insertAtBeginning($another_node);
