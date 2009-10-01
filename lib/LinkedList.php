@@ -89,7 +89,7 @@ class LinkedList
     public function getIndex($index)
     {
         if (!$this->isEmpty() && ($this->size() - 1) >= $index) {
-            if ($this->size() == $index) {
+            if (($this->size() - 1) == $index) {
                 return $this->getLast();
             } else if ($index == 0) {
                 return $this->getFirst();
