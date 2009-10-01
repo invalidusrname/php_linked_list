@@ -179,6 +179,44 @@ class LinkedListTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('', $this->linked_list->printReverse());
     }
+    
+    public function testGetIndex()
+    {
+        // for a non-empty LinkedList
+        $node = new Node(1);
+        $this->linked_list->push($node);
+        $index = $this->linked_list->getIndex(0);
+        $this->assertEquals($node, $index);
+        
+        $another_node = new Node(2);
+        $this->linked_list->push($another_node);
+
+        $index = $this->linked_list->getIndex(0);
+        $this->assertEquals($node, $index);
+
+        $another_index = $this->linked_list->getIndex(1);
+        $this->assertEquals($another_node, $another_index);
+
+        $final_node = new Node(3);
+        $this->linked_list->push($final_node);
+
+        $final_index = $this->linked_list->getIndex(2);
+        
+        $this->assertEquals($final_index, $final_index);
+
+        // for an empty LinkedList
+        $this->linked_list = new LinkedList();
+
+        $non_index     = $this->linked_list->getIndex(0);
+        $another_index = $this->linked_list->getIndex(1);
+        $last_index    = $this->linked_list->getIndex(2);
+        $negative_index    = $this->linked_list->getIndex(-1);
+
+        $this->assertEquals(null, $non_index);
+        $this->assertEquals(null, $another_index);
+        $this->assertEquals(null, $last_index);
+        $this->assertEquals(null, $negative_index);
+    }
 }
 
 ?>
