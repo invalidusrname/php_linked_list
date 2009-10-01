@@ -75,8 +75,8 @@ class LinkedList
             $prev->setNext($new_node);
             $new_node->setPrev($prev);
             $this->_last = $new_node;
+            $this->_count++;
         }
-        $this->_count++;
     }
 
     /**
@@ -120,7 +120,6 @@ class LinkedList
     {
         if ($this->isEmpty()) {
             $this->_last = $node;
-
         } else {
             $first = $this->getFirst();
             $first->setPrev($node);
@@ -128,6 +127,7 @@ class LinkedList
         }
 
         $this->_first = $node;
+        $this->_count++;
     }
 
     /**

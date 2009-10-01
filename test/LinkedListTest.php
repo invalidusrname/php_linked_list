@@ -71,9 +71,9 @@ class LinkedListTest extends PHPUnit_Framework_TestCase
         $node = new Node(1);
         $this->linked_list->insertAtBeginning($node);
         $this->assertEquals($node, $this->linked_list->getFirst());
+        $this->assertEquals(false, $this->linked_list->isEmpty());
 
         $another_node = new Node(1);
-
         $this->linked_list->insertAtBeginning($another_node);
 
         $this->assertEquals($another_node, $this->linked_list->getFirst());
@@ -179,29 +179,38 @@ class LinkedListTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals('', $this->linked_list->printReverse());
     }
-    
+
     public function testGetIndex()
     {
         // for a non-empty LinkedList
-        $node = new Node(1);
-        $this->linked_list->push($node);
-        $index = $this->linked_list->getIndex(0);
-        $this->assertEquals($node, $index);
-        
-        $another_node = new Node(2);
-        $this->linked_list->push($another_node);
+        $first_node = new Node(1);
+        $this->linked_list->push($first_node);
 
         $index = $this->linked_list->getIndex(0);
-        $this->assertEquals($node, $index);
+        $this->assertEquals($first_node, $index);
 
-        $another_index = $this->linked_list->getIndex(1);
-        $this->assertEquals($another_node, $another_index);
+        $last_node = new Node(2);
+        $this->linked_list->push($last_node);
 
-        $final_node = new Node(3);
-        $this->linked_list->push($final_node);
+        $index = $this->linked_list->getIndex(0);
+        $this->assertEquals($first_node, $index);
 
-        $final_index = $this->linked_list->getIndex(2);
-        
+        $index = $this->linked_list->getIndex(1);
+        $this->assertEquals($last_node, $index);
+
+        $third_node = new Node(3);
+        $fourth_node = new Node(4);
+
+        $this->linked_list->push($third_node);
+        $this->linked_list->push($fourth_node);
+
+        $index = $this->linked_list->getIndex(1);
+        $this->assertEquals($index, $index);
+
+        $index = $this->linked_list->getIndex(2);
+        $this->assertEquals($index, $index);
+
+        $final_index = $this->linked_list->getIndex(3);
         $this->assertEquals($final_index, $final_index);
 
         // for an empty LinkedList
